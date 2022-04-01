@@ -1,4 +1,4 @@
-// note I may need to update parts of this
+ // note this doesn't throw errors but also doesn't work
 
 // Dependencies
 const express = require('express');
@@ -17,7 +17,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
-// I need to update this for my needs
+// I need to add when my controllers are done
 //app.use(require('./controllers/'));
 
 // Starts the server to begin listening
@@ -27,7 +27,7 @@ app.listen(PORT, () => {
 
 
 
-
+ 
 
 
 
@@ -73,3 +73,4 @@ app.listen(PORT, () => {
 // sequelize.sync({ force: false }).then(() => {
 //   app.listen(PORT, () => console.log('Now listening'));
 // });
+
