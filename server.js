@@ -6,8 +6,6 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const hbs = exphbs.create({});
 
-
-
 // Sets up the Express App
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -18,7 +16,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'public')));
 // I need to add when my controllers are done
-//app.use(require('./controllers/'));
+app.use(require('./controllers/'));
 
 // Starts the server to begin listening
 app.listen(PORT, () => {
